@@ -4,7 +4,8 @@ const posts = require ('../posts')
 
 //index 
 router.get ('/', (req,res) => {
-  console.log(`Lista dei dolci: ${posts}`)
+  const title = posts.map(post => post.title);
+  console.log (title)
   res.json ({posts})
 })
 
@@ -12,7 +13,6 @@ router.get ('/', (req,res) => {
 router.get ('/:slug', (req,res) => {
   const slug = req.params.slug
   console.log (`Nome dolce: ${slug}`)
-  // res.json ('Nome dolce:' + slug ) 
   res.json ({
     Nome: slug
   })
