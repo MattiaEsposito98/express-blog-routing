@@ -15,7 +15,7 @@ router.get ('/:slug', (req,res) => {
   const post = posts.find((id) => id.slug === slug)
   console.log (`Nome dolce: ${slug}`)
   res.json ({
-    Nome: post
+    Dolce: post
   })
 }) 
 
