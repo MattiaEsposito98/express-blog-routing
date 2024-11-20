@@ -12,9 +12,10 @@ router.get ('/', (req,res) => {
 //show
 router.get ('/:slug', (req,res) => {
   const slug = req.params.slug
+  const post = posts.find((id) => id.slug === slug)
   console.log (`Nome dolce: ${slug}`)
   res.json ({
-    Nome: slug
+    Nome: post
   })
 }) 
 
